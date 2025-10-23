@@ -1,6 +1,35 @@
-body{
-    background: #1b1b1b;
-    color:white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
+body {
+  background: #1b1b1b; /* как раньше — тёмный фон */
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+input{
+  width: 200px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background: #383838;
+  padding-left: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:white;
+}
+
+button{
+  width: 100px;
+  height: 30px;
+  background: #0c0c0c;
+  border-radius: 5px;
+  border: none;
+  margin-left: 10px;
+  color:rgb(216, 216, 216);
+}
+
+button:active{
+  width: 95px;
+  transition: 0.30s;
 }

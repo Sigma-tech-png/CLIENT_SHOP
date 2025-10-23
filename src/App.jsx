@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
+import { Link } from "react-router";
 import "./App.css"
 
 export default function App(){
@@ -14,6 +15,7 @@ export default function App(){
     return(
         <>
             <h1>{text}</h1>
+            <Link to={"/create"}>Create Account</Link>
         </>
     )
 }

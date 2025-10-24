@@ -1,20 +1,20 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import { Link } from "react-router";
+import { Link, useLoaderData } from "react-router";
 import "./App.css"
 
 export default function App(){
-    const [text,setText] = useState();
+    const LoaderData = useLoaderData();
 
     useEffect(() => {
-        fetch(`${import.meta.env.VITE_API_URL}/`)
-        .then(res => res.json())
-        .then(data => setText(data.text));
-    },[])
+        if(LoaderData.status == false){
+            window.location.href = "/create"
+        }
+    },[LoaderData])
 
     return(
         <>
-            <h1>{text}</h1>
+            {/* <h1>{text}</h1> */}
             <Link to={"/create"}>Create Account</Link>
         </>
     )

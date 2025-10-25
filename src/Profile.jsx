@@ -19,10 +19,26 @@ export default function Profile(){
         })
     }, [])
 
+    async function Buy(){
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/buy`,{
+            method:"POST",
+            credentials:"include",
+        })
+
+        const data = await res.json();
+        alert(data.status);
+    }
+
     return(
         <>
             <h1>{text} Profile</h1>
             <h3>Balance: {balance}</h3>
+
+            <div className="product_1">
+                <h3>AWP Shooter</h3>
+                <p>Rare: Legend</p>
+                <button onClick={() => Buy()}>Buy</button>
+            </div>
         </>
     )
 }

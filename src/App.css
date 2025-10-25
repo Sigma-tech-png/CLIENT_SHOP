@@ -30,6 +30,11 @@ button{
 }
 
 button:active{
-  width: 95px;
+  background: #111111;
   transition: 0.30s;
+}
+
+.btn_profile{
+  display: block;
+  margin: 10px;
 }

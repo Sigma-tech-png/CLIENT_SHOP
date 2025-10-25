@@ -5,10 +5,12 @@ import App from './App.jsx'
 import Create from './Create.jsx'
 import { ActionCreate } from './Action/ActionCreate.jsx'
 import { LoaderAuth } from './Loader/LoaderAuth.jsx'
+import Profile from './Profile.jsx'
 
 const router = createBrowserRouter([
   {path:"/",element:<App/>,loader:LoaderAuth},
-  {path:"/create",element:<Create/>,action:ActionCreate}
+  {path:"/create",element:<Create/>,action:ActionCreate},
+  {path:"/user/profile",element:<Profile/>}
 ])
 
 createRoot(document.getElementById('root')).render(
